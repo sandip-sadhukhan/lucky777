@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lucky 777</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="header display-4 text-center">Lucky 777</h1>
+    <div class="subheading text-center">The Game is Developed by <a href="https://yourwebsite.github.io/"> Sandip Sadhukhan.</a></div>
+    <hr class="w-25 text-center">
+    <div class="container-fluid">
+        <button class="btn btn-success mb-3 moneybtn">Money - &#8377;<span id="money"></span></button><span id="profitloss">(Make your Money 6X)</span>
+        <div class="row">
+            <div class="col-12 col-md-3 mb-3">
+                <div class="card bg-dark pb-5 text-white text-center display-4">
+                    <div class="card-header">1</div>
+                    <div class="card-footer">
+                        <form submit="return false">
+                            <div class="form-group">
+                                <input id="one"  type="number" class="form-control bg-dark text-white">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+                <div class="card bg-dark pb-5 text-white text-center display-4">
+                    <div class="card-header">2</div>
+                    <div class="card-footer">
+                        <form submit="return false">
+                            <div class="form-group">
+                                <input id="two" type="number" class="form-control bg-dark text-white">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+                <div class="card bg-dark pb-5 text-white text-center display-4">
+                    <div class="card-header">3</div>
+                    <div class="card-footer">
+                        <form submit="return false">
+                            <div class="form-group">
+                                <input id="three" type="number" class="form-control bg-dark text-white">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+                   <img src="img/1.png" alt="" class="img-fluid " id="diceimg">
+                </div>
+            </div> 
+        <div class="row">
+            <div class="col-12 col-md-3 mb-3">
+                <div class="card bg-dark pb-5 text-white text-center display-4">
+                    <div class="card-header">4</div>
+                    <div class="card-footer">
+                        <form submit="return false">
+                            <div class="form-group">
+                                <input id="four" type="number" class="form-control bg-dark text-white">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+                <div class="card bg-dark pb-5 text-white text-center display-4">
+                    <div class="card-header">5</div>
+                    <div class="card-footer">
+                        <form submit="return false">
+                            <div class="form-group">
+                                <input id="five" type="number" class="form-control bg-dark text-white">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+                    <div class="card bg-dark pb-5 text-white text-center display-4">
+                        <div class="card-header">6</div>
+                        <div class="card-footer">
+                            <form submit="return false">
+                                <div class="form-group">
+                                    <input id="six" type="number" class="form-control bg-dark text-white">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+                <button class="btn btn-primary w-75 h-25 mb-4" id="roll" onclick="roll()">Roll</button>
+                <button class="btn btn-warning w-75 h-25 mb-4" id="reset" onclick="reset()">Reset</button>
+                <button class="btn btn-success w-75 h-25" id="money" onclick="money()">Buy +&#8377;100</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
