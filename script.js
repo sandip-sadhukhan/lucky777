@@ -52,43 +52,46 @@ function roll(){
     else{
     const randomno=Math.floor(Math.random()*6)+1;
     // const randomno=1;
-    document.getElementById('diceimg').src="img/"+randomno+".png";
-    for(i=1;i<=6;i++){
-        if(i==randomno){
-            yourmoney=yourmoney-money[i];
-            yourmoney=yourmoney+ money[i]*6;
+    document.getElementById('diceimg').src="img/img.gif";
+    setTimeout(function(){
+        document.getElementById('diceimg').src="img/"+randomno+".png";
+        for(i=1;i<=6;i++){
+            if(i==randomno){
+                yourmoney=yourmoney-money[i];
+                yourmoney=yourmoney+ money[i]*6;
+            }
+            else{
+                yourmoney=yourmoney-money[i];
+            }
+        }
+        // alert(yourmoney);
+        document.getElementById('money').innerHTML=yourmoney;
+        let diffmoney=0;
+        if(yourmoney>yourmoneycopy){
+            diffmoney=yourmoney-yourmoneycopy;
+            document.getElementById('profitloss').innerHTML=`(Profit - &#8377;${diffmoney})`;
+            document.getElementById('profitloss').style.color="green";
+        }
+        else if(yourmoney==yourmoneycopy){
+            document.getElementById('profitloss').innerHTML=`(No Profit No Loss!)`;
+            document.getElementById('profitloss').style.color="black";
         }
         else{
-            yourmoney=yourmoney-money[i];
+            diffmoney=yourmoneycopy-yourmoney;
+            document.getElementById('profitloss').innerHTML=`(Loss - &#8377;${diffmoney})`;
+            document.getElementById('profitloss').style.color="red";
         }
-    }
-    // alert(yourmoney);
-    document.getElementById('money').innerHTML=yourmoney;
-    let diffmoney=0;
-    if(yourmoney>yourmoneycopy){
-        diffmoney=yourmoney-yourmoneycopy;
-        document.getElementById('profitloss').innerHTML=`(Profit - &#8377;${diffmoney})`;
-        document.getElementById('profitloss').style.color="green";
-    }
-    else if(yourmoney==yourmoneycopy){
-        document.getElementById('profitloss').innerHTML=`(No Profit No Loss!)`;
-        document.getElementById('profitloss').style.color="black";
-    }
-    else{
-        diffmoney=yourmoneycopy-yourmoney;
-        document.getElementById('profitloss').innerHTML=`(Loss - &#8377;${diffmoney})`;
-        document.getElementById('profitloss').style.color="red";
-    }
-//init inputs
-    for(i=1;i<=6;i++){
-        money[i]=0;
-    }
-    document.getElementById('one').value=null;
-    document.getElementById('two').value=null;
-    document.getElementById('three').value=null;
-    document.getElementById('four').value=null;
-    document.getElementById('five').value=null;
-    document.getElementById('six').value=null;
+    //init inputs
+        for(i=1;i<=6;i++){
+            money[i]=0;
+        }
+        document.getElementById('one').value=null;
+        document.getElementById('two').value=null;
+        document.getElementById('three').value=null;
+        document.getElementById('four').value=null;
+        document.getElementById('five').value=null;
+        document.getElementById('six').value=null;
+    },500);
 }
 }
 
